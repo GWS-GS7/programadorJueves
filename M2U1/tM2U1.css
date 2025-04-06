@@ -1,0 +1,23 @@
+.cuadrado{
+    width: 100px;
+    height: 100px;
+}
+
+#cuadrado1{
+    background-color: red;
+ 
+}
+
+#cuadrado2{
+    background-color: green;
+    position: relative;
+    left: 100px;
+    bottom: 100px;
+}
+
+#cuadrado3{
+    background: blue;
+    position: relative;
+    left: 200px;
+    bottom: 200px;
+}

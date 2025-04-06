@@ -1,3 +1,44 @@
-p{
-    background-color: aquamarine;
+
+header{
+    background: coral;
+    color: blue;
+    height: 100px;
+    width: 400px;
+    margin: 0px;
+    text-align: center;
+    position: relative;
+    left: 400px;
+    top: 200px;
+
+}
+h2{
+    color: black;
+}
+
+h3{
+    color: white;
+    background: blue;
+    text-align: center;
+    width: 400px;
+}
+aside{
+    background: lightgray;
+    margin: 0px auto;
+    border: 1px solid;
+    position: relative;
+    min-height:500px;
+    
+    
+}
+
+section{
+    
+    background: aquamarine;
+    width: 500px;
+    margin: 0px auto;
+    min-height: 300px;
+    
+    border: 1px solid;
+    position: relative;
+
 }

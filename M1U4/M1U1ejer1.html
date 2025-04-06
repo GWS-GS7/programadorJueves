@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+</head>
+<body>
+    <!--EJERCICIO: 1
+            Utilizan  lo aprendido escribir el código necesario para que dada una distancia determine el medio de transporte apropiado de acuerdo a las siguientes reglas:
+
+            0 a 1000 metros = pie
+            1000 a 10000 metros = bicicleta
+            10000 a 30000 metros = colectivo
+            30000 a 100000 metros = auto
+            +100000 = avión
+        EJERCICIO2: 
+            Haciendo uso de los bucles, recorrer un array de números y determinar cual es el mayor-->
+            <script>
+                const distancia=prompt("ingrese la distancia a recorrer:")
+                if(distancia<1000){
+                    alert("pie")
+                }else if(distancia>=1000 && distancia<10000){
+                    alert("bici")
+                }else if(distancia>=10000 && distancia<30000){
+                    alert("colectivo")
+                }else if(distancia>=30000 && distancia<100000){
+                    alert("auto")
+                }else if(distancia>=100000){
+                    alert("avion")
+                    }
+            </script>
+</body>
+</html>
