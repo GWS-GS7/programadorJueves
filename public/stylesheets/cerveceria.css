@@ -1,0 +1,224 @@
+/*font-family: "Alfa Slab One", serif;*/
+
+footer {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.social-icons a img {
+  width: 30px;
+  margin: 0 10px;
+  /*filter: invert(100%); si los iconos son SVG negros*/
+  transition: transform 0.2;
+}
+
+.social-icons a img:hover {
+  transform: scale(1.1);
+}
+
+.hero {
+  background: url(../img/header.jpg) no-repeat;
+  background-size: cover;
+  height: 0.5vh;
+  min-height: 600px;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: "Alfa Slab One", cursive;
+}
+
+.lista-novedades {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-novedades li {
+  margin: 4px 0;
+  transform: scale(1.1);
+}
+
+/*//*/
+.lista-novedades li a {
+  background-color: #fff;
+  font-family: 'Alfa Slab One', cursive;
+  text-decoration: none;
+  font-size: 1.1rem;
+  color: #333;
+  transition: all .2s ease-in-out;
+  display: flex; 
+  align-items: center;
+  gap: 1rem; 
+  text-align: left; 
+  border-radius: 15px;
+  padding: 10px;
+}
+
+
+
+.lista-novedades li a:hover {
+  color: #212529;
+  background-color: #dadada;
+  transform: scale(1.1);
+}
+
+.lista-novedades li a img {
+  width: 120px;
+  height: 50px;
+  filter: grayscale();
+  transition: all 0.2s ease-in-out;
+  margin-right: 1rem;
+  opacity: 0.7;
+
+}
+
+.lista-novedades li a:hover img {
+  filter: none;
+  margin-right: 1.4rem;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.testimonios {
+  background-color: #dadada;
+  padding-bottom: 4rem !important;
+}
+
+.testimonio {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.staff {
+  background: #efefef;
+}
+.mapa iframe {
+  width: 100%;
+  aspect-ratio: 1.2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.scroll-section {
+  scroll-margin-top: 60px;
+}
+
+
+.pedido-flotante {
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: inset 0 0 0 orange;
+  transition: all ease 1s;
+  font-weight: bold;
+}
+
+.pedido-flotante:hover {
+  box-shadow: inset 200px 0 0 orange;
+  color: black;
+  transform: scale(1.1);
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+
+
+.galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    animation: fadeInUp 1.5s ease;
+}
+
+.card{
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0, 0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease , box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+/*ANIMACIONES*/
+@keyframes fadeIn {
+    from {opacity: 0; transform:translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes fadeInUp {
+    from {opacity: 0; transform:translateY(40px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+
+.scroll-animado {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.scroll-animado.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*********************/
+
+
+tr.fila-animada {
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+tr.fila-animada:hover {
+  transform: scale(1.02);
+  background-color: #f9f5e9; /* Un amarillo pálido suave */
+}
+
+tr.fila-animada:hover td a {
+  color: #dc3545 !important; /* Rojo para íconos al hacer hover */
+}
+
+/**********************/
+.fondoH {
+  background: gray;
+  background-color: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(8px); /* primero el prefijo */
+  backdrop-filter: blur(8px);         /* luego el estándar */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+/*************************************/
+#cerveza-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.5; /* o más para que se vea menos fuerte */
+  pointer-events: none; /* para que no interfiera con clicks */
+}
