@@ -1,0 +1,389 @@
+<div class="container-fluid">
+  <div id="home" class="row align-items-center hero scroll_section">
+    <div class="col-lg-3 offset-lg-2">
+      <p>Bjada</p>
+      <h1>Cerveceria "EL LARRY"</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam vero
+        harum voluptatem doloremque labore excepturi vitae ex accusantium
+        voluptatum, similique quidem eius autem asperiores. Quod libero eos
+        cupiditate provident nulla.</p>
+    </div>
+  </div>
+</div>
+
+<div id="novedades" class="row py-4">
+  <div class="col-md-5 offset-md-2 py-3">
+    <h2>Novedades</h2>
+    <ul class="lista-novedades">
+      {{#each novedades}}
+        <li>
+          <a
+            href="javascript:void(0);"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal{{id}}"
+          >
+            <img src="/img/novedades01.jpg" />
+            {{titulo}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+
+  <!-- Generación de modales por cada novedad -->
+  {{#each novedades}}
+    <div
+      class="modal fade"
+      id="Modal{{id}}"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel{{id}}"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="exampleModalLabel{{id}}">{{titulo}}</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5>{{subtitulo}}</h5>
+            <p>{{cuerpo}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+<!--SECCION RECETAS ........HAY Q MIGRARLA LA RUTA A OTRA PAGINA -->
+
+<!--CIERRO SECCION RECETAS-->
+
+<div style="display: flex; justify-content:center;">
+  <!--testimonios-->
+  <div class="col-md-3 my-3">
+    <div class="rounded py-5 testimonios">
+      <h2 class="text-center">Testimonios</h2>
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide"
+        data-bs-ride="true"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="testimonio">
+              <h5>"La mejor birra del mundo!!"</h5>
+              <p>Francisco , Monte Grande</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonio">
+              <h5>"Mucha esencia esta birra!!"</h5>
+              <p>Flavia , Devoto</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="testimonio">
+              <h5>"Terrible esta birra!!"</h5>
+              <p>Eric , Mataderos</p>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+
+      </div>
+    </div><!--cierra lo de testimonios-->
+  </div>
+</div><!--cierra div con novedades-->
+
+<section class="hero scroll-animado">
+  <div id="historia" class="row align-items-center py-4">
+    <div class="col-lg-2 col-md-3 offset-lg-2 d-none d-sm-block">
+      <img src="img/historia_1.jpg" alt="historia 1" class="img-fluid" />
+    </div>
+    <div class="col-lg-2 col-md-3 d-none d-sm-block">
+      <img src="img/historia_2.jpg" alt="historia 2" class="img-fluid" />
+    </div>
+    <div class="col-12 d-sm-none">
+      <img src="img/historia_3.jpg" alt="historia 3" class="img-fluid" />
+    </div>
+    <div class="col-lg-4 col-md-6 mt-4 mt-sm-0">
+      <h2>Historia</h2>
+      <div class="fondoH">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
+        obcaecati necessitatibus laborum ex quisquam vero dolor tempore
+        repellendus numquam veniam odio molestiae nisi exercitationem error
+        tenetur ipsa illum dolorem nostrum?
+        
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae culpa
+        voluptatum cumque quasi distinctio aperiam nihil ex tempore porro
+        veritatis ad ducimus, atque vitae nam natus eos numquam dolor ipsa.
+      </p>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur animi
+        iusto reprehenderit quaerat maxime sed, neque vel culpa possimus earum
+        error distinctio doloremque et assumenda. Sit magni harum maxime
+        debitis.
+        
+      </p>
+      <P>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis cum libero sapiente quia quae architecto. Ullam magni impedit voluptatum explicabo est, voluptatem atque, unde eum itaque, animi consequuntur blanditiis? Dolorem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta debitis incidunt itaque fugiat pariatur officia molestiae maxime quisquam voluptates magnam excepturi ullam dolorem possimus, accusantium error veritatis fuga? Voluptas, repellat.
+      </P>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!--nosotros-->
+<div
+  id="nosotros"
+  class="row align-items-stretch my-3 staff py-4 scroll_section"
+>
+  <div class="col-lg-8 offset-lg-2">
+    <h2>Nosotros</h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/nosotros01.jpg"
+            class="card-img-top"
+            alt="Diana Reyes"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a longer card with supporting text
+              below as a natural lead-in to additional content. This content is
+              a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/nosotros02.jpg"
+            class="card-img-top"
+            alt="Carlos Marinez"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Carlos Martinez</h5>
+            <p class="card-text">This is a longer card with supporting text
+              below as a natural lead-in to additional content. This content is
+              a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img
+            src="img/nosotros03.jpg"
+            class="card-img-top"
+            alt="Andres Sarubbi"
+          />
+          <div class="card-body">
+            <h5 class="card-title">Ronald</h5>
+            <p class="card-text">This is a longer card with supporting text
+              below as a natural lead-in to additional content. This content is
+              a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <img src="img/nosotros04.jpg" class="card-img-top" alt="larryyyy" />
+          <div class="card-body">
+            <h5 class="card-title">Larry</h5>
+            <p class="card-text">This is a longer card with supporting text
+              below as a natural lead-in to additional content. This content is
+              a little bit longer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--VISITANOS-->
+<div id="conocenos" class="row my-4 scroll_section">
+  <div class="col-md-4 offset-md-2">
+    <h2>Visitanos</h2>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d580.9668881671497!2d-58.711721789739926!3d-34.54228643884116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sar!4v1744936509633!5m2!1ses-419!2sar"
+      ></iframe>
+    </div>
+  </div><!--cierra div con id visitanos-->
+
+  <div class="col-md-4 mt-4 mt-sm-0 scroll_section">
+    <ul>
+      <h2>Contactanos</h2>
+    </ul>
+    <ul>
+      <form class="row g-3" action="/" method="post">
+        <div class="col-md-6">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="nombre" name="nombre" />
+        </div>
+        <div class="col-md-6">
+          <label for="apellido" class="form-label">Apellido</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            name="apellido"
+          />
+        </div>
+        <div class="col-12">
+          <label for="email" class="form-label">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="Email"
+            name="email"
+            placeholder="email@gmail.com"
+          />
+        </div>
+        <div class="col-12">
+          <label for="tel" class="form-label">Tel</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tel"
+            name="tel"
+            placeholder="+54..."
+          />
+        </div>
+        <div class="col-12">
+          <label for="mensaje" class="form-label">Mensaje</label>
+          <textarea
+            class="form-control"
+            id="mensaje"
+            name="mensaje"
+            rows="3"
+          ></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </div>
+      </form>
+      {{message}}
+    </ul>
+
+  </div><!--cierra div con id conocenos-->
+  <!--AGREGUE UN DIV PARA ACOMODAR-->
+
+</div>
+<!-- Botón DE ENVIO DE PEDIDO-->
+<button
+  type="button"
+  class="btn btn-success pedido-flotante"
+  data-bs-toggle="modal"
+  data-bs-target="#modalPedido"
+>Hacer mi pedido
+</button>
+
+<div
+  class="modal fade"
+  id="modalPedido"
+  tabindex="-1"
+  aria-labelledby="modalPedidoLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalPedidoLabel">Pedido de cerveza</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Cerrar"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required />
+          </div>
+          <div class="mb-3">
+            <label for="cerveza" class="form-label">Tipo de cerveza</label>
+            <select class="form-select" id="cerveza">
+              <option>Lager</option>
+              <option>IPA</option>
+              <option>Stout</option>
+            </select>
+          </div>
+          <div class="mb-3">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <input
+              type="number"
+              class="form-control"
+              id="cantidad"
+              min="1"
+              required
+            />
+          </div>
+          <div class="mb-3">
+            <label for="contacto" class="form-label">WhatsApp o Email</label>
+            <input type="text" class="form-control" id="contacto" required />
+          </div>
+          <button type="submit" class="btn btn-primary">Enviar pedido</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!--CIERRE DE BOTON-->
